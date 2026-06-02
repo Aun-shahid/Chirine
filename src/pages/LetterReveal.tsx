@@ -63,13 +63,13 @@ export const LetterReveal = () => {
 
           <p>
             Two and a Half years. 906 days of you, your infectious laugh, your gorgeous
-            curly hair, the way your eyes light up when you talk about things
+            curly hair (not as curly anymore but still), the way your eyes light up when you talk about things
             you love. Every single day with you has been a gift I never knew I
             needed.
           </p>
 
           <p>
-            You came into my life like a breeze from the streets of France, and
+            You came into my life like a breeze and
             suddenly everything made more sense. The world became more colorful,
             more beautiful, more worth being in. I never knew love could be so beautiful.
           </p>
