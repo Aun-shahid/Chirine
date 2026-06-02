@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { FloatingHearts } from '../components/FloatingHearts';
 import { LetterReveal } from './LetterReveal';
 import { LockKeyhole, Sparkles } from 'lucide-react';
-import { Footer } from '../components/Footer';
+import { Header } from '../components/Header';
 
 const SECRET_PASSWORD = 'carrots';
 
@@ -43,6 +43,7 @@ export const PasswordPage = () => {
     <>
       <FloatingHearts />
       <div className="page">
+        <Header />
         <div
           className={`glass-card animate-fade-in-up ${shaking ? 'animate-shake' : ''}`}
           style={{ textAlign: 'center' }}
@@ -114,7 +115,6 @@ export const PasswordPage = () => {
             )}
           </form>
         </div>
-        <Footer />
       </div>
     </>
   );

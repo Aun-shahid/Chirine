@@ -1,5 +1,5 @@
 import { FloatingHearts } from '../components/FloatingHearts';
-import { Footer } from '../components/Footer';
+import { Header } from '../components/Header';
 import { Mail, Sparkles } from 'lucide-react';
 
 export const SupportPage = () => {
@@ -7,7 +7,8 @@ export const SupportPage = () => {
     <>
       <FloatingHearts />
       <div className="page">
-        <div className="glass-card animate-fade-in-up" style={{ textAlign: 'center', maxWidth: '520px' }}>
+        <Header />
+        <div className="glass-card animate-fade-in-up" style={{ textAlign: 'center', maxWidth: '650px' }}>
           <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '1.25rem' }}>
             <Mail size={48} style={{ color: 'var(--pink-500)' }} />
           </div>
@@ -50,7 +51,6 @@ export const SupportPage = () => {
             Send Email to Nienie <Sparkles size={18} />
           </a>
         </div>
-        <Footer />
       </div>
     </>
   );

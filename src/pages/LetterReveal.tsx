@@ -74,7 +74,7 @@ export const LetterReveal = () => {
             more beautiful, more worth being in. I never knew love could be so beautiful.
           </p>
 
-          <p>Today you turn 25, and I want you to know something:</p>
+          <p>Today you turn 24, and I want you to know something:</p>
 
           <p
             style={{

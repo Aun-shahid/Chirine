@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { FloatingHearts } from '../components/FloatingHearts';
 import { useNavigate } from 'react-router-dom';
-import { Footer } from '../components/Footer';
+import { Header } from '../components/Header';
 import {
   HelpCircle,
   ArrowLeft,
@@ -31,7 +31,7 @@ export const SkipGauntlet = () => {
 
   // ---- Per-step state ----
   const [sliderVal, setSliderVal] = useState(0);
-  const [sliderWidth, setSliderWidth] = useState(320); // starts small
+  const [sliderWidth, setSliderWidth] = useState(400); // starts small
   const [pumpPressure, setPumpPressure] = useState(0);
   const [isPumping, setIsPumping] = useState(false);
   const [checks, setChecks] = useState<boolean[]>(Array(10).fill(false));
@@ -54,18 +54,18 @@ export const SkipGauntlet = () => {
 
   // Slider for step 2: doubles card width when she gets close to 80%
   const handleSliderChange = (val: number) => {
-    if (val >= 80 && sliderWidth === 320) {
-      setSliderWidth(640);
+    if (val >= 80 && sliderWidth === 400) {
+      setSliderWidth(800);
       setSliderVal(40); // drops handle relative position back to 40%
       return;
     }
-    if (val >= 80 && sliderWidth === 640) {
-      setSliderWidth(1200);
+    if (val >= 80 && sliderWidth === 800) {
+      setSliderWidth(1400);
       setSliderVal(43); // drops handle relative position back to 43%
       return;
     }
     setSliderVal(val);
-    if (val >= 98 && sliderWidth === 1200) {
+    if (val >= 98 && sliderWidth === 1400) {
       nextStep();
     }
   };
@@ -153,9 +153,9 @@ export const SkipGauntlet = () => {
               Slide to confirm you're a quitter
             </h2>
             <p style={{ marginBottom: '1.5rem', minHeight: '3rem' }}>
-              {sliderWidth === 320 && 'Go ahead… if you dare.'}
-              {sliderWidth === 640 && 'Whoa! The card just doubled! 🤨'}
-              {sliderWidth === 1200 && 'Stretching to the max! Catch it if you can! 😱'}
+              {sliderWidth === 400 && 'Go ahead… if you dare.'}
+              {sliderWidth === 800 && 'Whoa! The card just doubled! 🤨'}
+              {sliderWidth === 1400 && 'Stretching to the max! Catch it if you can! 😱'}
             </p>
             <div style={{ padding: '0 0.5rem', marginBottom: '1.5rem', width: '100%' }}>
               <input
@@ -653,20 +653,20 @@ export const SkipGauntlet = () => {
     <>
       <FloatingHearts />
       <div className="page">
+        <Header />
         <div
           className="glass-card animate-fade-in-up"
           style={{
             textAlign: 'center',
             maxWidth: step === 2
-              ? (sliderWidth === 1200 ? 'calc(100vw - 3rem)' : `${sliderWidth}px`)
-              : '520px',
+              ? (sliderWidth === 1400 ? 'calc(100vw - 3rem)' : `${sliderWidth}px`)
+              : '650px',
             transition: 'max-width 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
           }}
         >
           {/* Current step content */}
           {renderStep()}
         </div>
-        <Footer />
       </div>
     </>
   );

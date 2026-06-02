@@ -1,6 +1,6 @@
 import { FloatingHearts } from '../components/FloatingHearts';
 import * as Icons from 'lucide-react';
-import { Footer } from '../components/Footer';
+import { Header } from '../components/Header';
 
 interface WrongPageProps {
   emoji?: string;
@@ -17,6 +17,7 @@ export const WrongPage = ({ emoji, iconName, message, subMessage }: WrongPagePro
     <>
       <FloatingHearts />
       <div className="page">
+        <Header />
         <div className="glass-card animate-fade-in-up" style={{ textAlign: 'center' }}>
           <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '1.5rem' }}>
             {IconComponent ? (
@@ -63,7 +64,6 @@ export const WrongPage = ({ emoji, iconName, message, subMessage }: WrongPagePro
             </p>
           </div>
         </div>
-        <Footer />
       </div>
     </>
   );

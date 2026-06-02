@@ -1,5 +1,5 @@
 import { FloatingHearts } from '../components/FloatingHearts';
-import { Footer } from '../components/Footer';
+import { Header } from '../components/Header';
 import { HelpCircle } from 'lucide-react';
 
 export const HintPage = () => {
@@ -7,7 +7,8 @@ export const HintPage = () => {
     <>
       <FloatingHearts />
       <div className="page">
-        <div className="glass-card animate-fade-in-up" style={{ textAlign: 'center', maxWidth: '600px' }}>
+        <Header />
+        <div className="glass-card animate-fade-in-up" style={{ textAlign: 'center', maxWidth: '850px' }}>
           <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '1.25rem' }}>
             <HelpCircle size={48} style={{ color: 'var(--pink-500)' }} />
           </div>
@@ -53,7 +54,6 @@ export const HintPage = () => {
             />
           </div>
         </div>
-        <Footer />
       </div>
     </>
   );

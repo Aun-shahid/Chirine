@@ -107,7 +107,7 @@ function App() {
             <WrongPage
               iconName="Gift"
               emoji="🎂"
-              message="25 and still falling for my tricks!"
+              message="24 and still falling for my tricks!"
               subMessage="Happy Birthday detour! Now go find the real path, birthday girl 🎉"
             />
           }

@@ -141,7 +141,7 @@ html, body {
   border-radius: var(--radius-lg);
   padding: 3rem 2.5rem;
   box-shadow: var(--shadow-pink);
-  max-width: 520px;
+  max-width: 650px;
   width: 100%;
   transition: var(--transition);
 }
@@ -576,9 +576,9 @@ input[type="range"]::-moz-range-thumb {
 }
 
 /* =============================================================
-   Footer Links
+   Header Links
    ============================================================= */
-.footer-link {
+.header-link {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
@@ -589,8 +589,9 @@ input[type="range"]::-moz-range-thumb {
   transition: var(--transition);
 }
 
-.footer-link:hover {
+.header-link:hover {
   color: var(--pink-500);
   transform: translateY(-1.5px);
 }
+
 

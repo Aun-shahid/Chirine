@@ -1,5 +1,5 @@
 import { FloatingHearts } from '../components/FloatingHearts';
-import { Footer } from '../components/Footer';
+import { Header } from '../components/Header';
 import { FileText } from 'lucide-react';
 
 export const LetterPage = () => {
@@ -7,7 +7,8 @@ export const LetterPage = () => {
     <>
       <FloatingHearts />
       <div className="page">
-        <div className="glass-card animate-fade-in-up" style={{ textAlign: 'center', maxWidth: '600px' }}>
+        <Header />
+        <div className="glass-card animate-fade-in-up" style={{ textAlign: 'center', maxWidth: '850px' }}>
           <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '1.25rem' }}>
             <FileText size={48} style={{ color: 'var(--pink-500)' }} />
           </div>
@@ -40,7 +41,6 @@ export const LetterPage = () => {
                 display: 'block',
               }}
               onError={(e) => {
-                // Fallback text if file isn't uploaded yet
                 e.currentTarget.style.display = 'none';
                 const parent = e.currentTarget.parentElement;
                 if (parent) {
@@ -54,7 +54,6 @@ export const LetterPage = () => {
             />
           </div>
         </div>
-        <Footer />
       </div>
     </>
   );

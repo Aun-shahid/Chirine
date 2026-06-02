@@ -1,12 +1,13 @@
 import { FloatingHearts } from '../components/FloatingHearts';
 import { Heart, Search } from 'lucide-react';
-import { Footer } from '../components/Footer';
+import { Header } from '../components/Header';
 
 export const Home = () => {
   return (
     <>
       <FloatingHearts />
       <div className="page">
+        <Header />
         <div className="glass-card animate-fade-in-up" style={{ textAlign: 'center' }}>
           <div
             style={{ display: 'flex', justifyContent: 'center', marginBottom: '1.25rem' }}
@@ -70,7 +71,6 @@ export const Home = () => {
             <Search size={32} style={{ color: 'var(--pink-400)' }} />
           </div>
         </div>
-        <Footer />
       </div>
     </>
   );
