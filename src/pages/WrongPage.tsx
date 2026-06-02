@@ -1,5 +1,6 @@
 import { FloatingHearts } from '../components/FloatingHearts';
 import * as Icons from 'lucide-react';
+import { Footer } from '../components/Footer';
 
 interface WrongPageProps {
   emoji?: string;
@@ -62,6 +63,7 @@ export const WrongPage = ({ emoji, iconName, message, subMessage }: WrongPagePro
             </p>
           </div>
         </div>
+        <Footer />
       </div>
     </>
   );

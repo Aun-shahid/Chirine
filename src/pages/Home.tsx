@@ -1,5 +1,6 @@
 import { FloatingHearts } from '../components/FloatingHearts';
 import { Heart, Search } from 'lucide-react';
+import { Footer } from '../components/Footer';
 
 export const Home = () => {
   return (
@@ -58,7 +59,7 @@ export const Home = () => {
             >
               ✨ The adventure begins with the letter and the image...
               <br />
-              Find the right QR code, and your surprise will be waiting. ✨
+              Follow the clues, and your surprise will be waiting. ✨
             </p>
           </div>
 
@@ -69,6 +70,7 @@ export const Home = () => {
             <Search size={32} style={{ color: 'var(--pink-400)' }} />
           </div>
         </div>
+        <Footer />
       </div>
     </>
   );

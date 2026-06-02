@@ -3,6 +3,9 @@ import { Home } from './pages/Home';
 import { WrongPage } from './pages/WrongPage';
 import { PasswordPage } from './pages/PasswordPage';
 import { SkipGauntlet } from './pages/SkipGauntlet';
+import { LetterPage } from './pages/LetterPage';
+import { HintPage } from './pages/HintPage';
+import { SupportPage } from './pages/SupportPage';
 
 function App() {
   return (
@@ -14,6 +17,11 @@ function App() {
         {/* ---- CORRECT PATHS ---- */}
         <Route path="/AlifetoLive" element={<PasswordPage />} />
         <Route path="/ALifetoPaint" element={<SkipGauntlet />} />
+
+        {/* ---- FOOTER NAVIGATION PATHS ---- */}
+        <Route path="/letter" element={<LetterPage />} />
+        <Route path="/hint" element={<HintPage />} />
+        <Route path="/support" element={<SupportPage />} />
 
         {/* ---- WRONG PATHS (8 decoys) ---- */}
         <Route
@@ -113,7 +121,7 @@ function App() {
               iconName="HelpCircle"
               emoji="🤷‍♀️"
               message="This path doesn't exist!"
-              subMessage="Nice try though. Scan a QR code from the image! 📱"
+              subMessage="Nice try though. Follow the clues from the image! 📱"
             />
           }
         />

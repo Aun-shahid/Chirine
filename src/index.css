@@ -574,3 +574,23 @@ input[type="range"]::-moz-range-thumb {
     font-size: 0.95rem;
   }
 }
+
+/* =============================================================
+   Footer Links
+   ============================================================= */
+.footer-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  color: var(--text-medium);
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.footer-link:hover {
+  color: var(--pink-500);
+  transform: translateY(-1.5px);
+}
+

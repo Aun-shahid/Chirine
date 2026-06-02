@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { FloatingHearts } from '../components/FloatingHearts';
 import { LetterReveal } from './LetterReveal';
-import { LockKeyhole, Sparkles, Lightbulb } from 'lucide-react';
+import { LockKeyhole, Sparkles } from 'lucide-react';
+import { Footer } from '../components/Footer';
 
 const SECRET_PASSWORD = 'carrots';
 
@@ -90,27 +91,6 @@ export const PasswordPage = () => {
               autoComplete="off"
             />
 
-            <div
-              style={{
-                padding: '0.75rem 1rem',
-                background: 'rgba(252, 231, 243, 0.4)',
-                borderRadius: 'var(--radius)',
-                border: '1px solid var(--pink-200)',
-                textAlign: 'left',
-              }}
-            >
-              <p
-                style={{
-                  fontSize: '0.88rem',
-                  color: 'var(--text-light)',
-                  fontStyle: 'italic',
-                }}
-              >
-                <Lightbulb size={16} style={{ color: 'var(--pink-400)', verticalAlign: 'middle', marginRight: '4px' }} />
-                Hint: An orange, crunchy root vegetable 🥕
-              </p>
-            </div>
-
             <button
               id="btn-unlock"
               type="submit"
@@ -134,6 +114,7 @@ export const PasswordPage = () => {
             )}
           </form>
         </div>
+        <Footer />
       </div>
     </>
   );

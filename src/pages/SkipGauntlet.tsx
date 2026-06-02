@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { FloatingHearts } from '../components/FloatingHearts';
 import { useNavigate } from 'react-router-dom';
+import { Footer } from '../components/Footer';
 import {
   HelpCircle,
   ArrowLeft,
@@ -665,6 +666,7 @@ export const SkipGauntlet = () => {
           {/* Current step content */}
           {renderStep()}
         </div>
+        <Footer />
       </div>
     </>
   );
