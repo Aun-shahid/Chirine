@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Home } from './pages/Home';
 import { WrongPage } from './pages/WrongPage';
@@ -8,6 +9,21 @@ import { HintPage } from './pages/HintPage';
 import { SupportPage } from './pages/SupportPage';
 
 function App() {
+  useEffect(() => {
+    const imagesToPreload = [
+      'https://images6.alphacoders.com/731/731739.jpg',
+      'https://images3.alphacoders.com/100/1006667.jpg',
+      'https://images4.alphacoders.com/100/1007089.jpg',
+      'https://images8.alphacoders.com/100/1006728.jpg',
+      'https://images6.alphacoders.com/112/1129972.jpg',
+      'https://images7.alphacoders.com/800/800653.jpg'
+    ];
+    imagesToPreload.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+  }, []);
+
   return (
     <Router>
       <Routes>

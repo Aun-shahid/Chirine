@@ -6,7 +6,16 @@ export const LetterPage = () => {
   return (
     <>
       <FloatingHearts />
-      <div className="page">
+      <div 
+        className="page"
+        style={{
+          backgroundImage: 'linear-gradient(rgba(255, 240, 245, 0.45), rgba(255, 240, 245, 0.45)), url("https://images4.alphacoders.com/100/1007089.jpg")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          backgroundAttachment: 'fixed',
+        }}
+      >
         <Header />
         <div className="glass-card animate-fade-in-up" style={{ textAlign: 'center', maxWidth: '850px' }}>
           <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '1.25rem' }}>
@@ -33,7 +42,7 @@ export const LetterPage = () => {
             }}
           >
             <img
-              src="/letter.jpg"
+              src="/letter.jpeg"
               alt="The Letter"
               style={{
                 width: '100%',
@@ -47,7 +56,7 @@ export const LetterPage = () => {
                   const div = document.createElement('div');
                   div.style.padding = '3rem 1.5rem';
                   div.style.color = 'var(--text-medium)';
-                  div.innerHTML = '📁 [letter.jpg placeholder]<br/>Please place letter.jpg inside the public/ directory.';
+                  div.innerHTML = '📁 [letter.jpeg placeholder]<br/>Please place letter.jpeg inside the public/ directory.';
                   parent.appendChild(div);
                 }
               }}

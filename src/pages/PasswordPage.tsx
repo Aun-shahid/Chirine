@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { FloatingHearts } from '../components/FloatingHearts';
 import { LetterReveal } from './LetterReveal';
-import { LockKeyhole, Sparkles } from 'lucide-react';
+import { LockKeyhole, Sparkles, HelpCircle, ChevronDown, ChevronUp } from 'lucide-react';
 import { Header } from '../components/Header';
 
 const SECRET_PASSWORD = 'carrots';
@@ -12,6 +12,7 @@ export const PasswordPage = () => {
   const [error, setError] = useState(false);
   const [shaking, setShaking] = useState(false);
   const [attempts, setAttempts] = useState(0);
+  const [showHint, setShowHint] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -42,7 +43,16 @@ export const PasswordPage = () => {
   return (
     <>
       <FloatingHearts />
-      <div className="page">
+      <div 
+        className="page"
+        style={{
+          backgroundImage: 'linear-gradient(rgba(255, 240, 245, 0.4), rgba(255, 240, 245, 0.4)), url("https://images3.alphacoders.com/100/1006667.jpg")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          backgroundAttachment: 'fixed',
+        }}
+      >
         <Header />
         <div
           className={`glass-card animate-fade-in-up ${shaking ? 'animate-shake' : ''}`}
@@ -68,7 +78,7 @@ export const PasswordPage = () => {
               fontSize: '1.05rem',
             }}
           >
-            You found the right path! ✨
+            You Are here finally! ✨
             <br />
             Now enter the secret password to unlock your surprise.
           </p>
@@ -114,6 +124,62 @@ export const PasswordPage = () => {
               </p>
             )}
           </form>
+
+          <div style={{ marginTop: '1.5rem', borderTop: '1px dashed var(--pink-200)', paddingTop: '1rem' }}>
+            <button
+              type="button"
+              onClick={() => setShowHint(!showHint)}
+              style={{
+                background: 'none',
+                border: 'none',
+                color: 'var(--pink-600)',
+                cursor: 'pointer',
+                fontSize: '0.9rem',
+                fontWeight: 600,
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '0.25rem',
+                padding: '0.25rem 0.5rem',
+                borderRadius: 'var(--radius)',
+                transition: 'background-color 0.2s',
+              }}
+              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'var(--pink-50)'}
+              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
+            >
+              <HelpCircle size={16} /> Need a hint? {showHint ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+            </button>
+            
+            {showHint && (
+              <div 
+                className="animate-fade-in"
+                style={{
+                  marginTop: '0.75rem',
+                  padding: '0.75rem 1rem',
+                  backgroundColor: 'rgba(255, 241, 242, 0.7)',
+                  border: '1px solid var(--pink-100)',
+                  borderRadius: 'var(--radius)',
+                  color: 'var(--pink-800)',
+                  fontSize: '0.9rem',
+                  lineHeight: '1.4',
+                  textAlign: 'left',
+                }}
+              >
+                <p style={{ margin: 0, fontWeight: 500 }}>Patience is virtue.</p>
+                <p style={{ margin: '0.25rem 0 0.5rem 0', fontWeight: 500 }}>You may not have all the pieces yet.</p>
+                <p style={{ 
+                  margin: 0, 
+                  fontSize: '0.8rem', 
+                  opacity: 0.8, 
+                  borderTop: '1px dashed rgba(244, 63, 94, 0.2)', 
+                  paddingTop: '0.4rem', 
+                  marginTop: '0.4rem', 
+                  fontStyle: 'italic' 
+                }}>
+                  PS: Something i'd love to eat one day.
+                </p>
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </>

@@ -6,7 +6,16 @@ export const SupportPage = () => {
   return (
     <>
       <FloatingHearts />
-      <div className="page">
+      <div 
+        className="page"
+        style={{
+          backgroundImage: 'linear-gradient(rgba(255, 240, 245, 0.45), rgba(255, 240, 245, 0.45)), url("https://images8.alphacoders.com/100/1006728.jpg")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          backgroundAttachment: 'fixed',
+        }}
+      >
         <Header />
         <div className="glass-card animate-fade-in-up" style={{ textAlign: 'center', maxWidth: '650px' }}>
           <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '1.25rem' }}>

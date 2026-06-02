@@ -316,7 +316,7 @@ export const SkipGauntlet = () => {
             >
               {[
                 "I'm too lazy for puzzles 🥱",
-                "I prefer eating croissants over finding clues 🥐",
+                "I prefer eating KFC over finding clues 🍗",
                 "My curly hair is too fabulous for this stress 🧕✨",
                 "I choose sleep over adventure 😴",
                 "I'd rather be watching a movie with you right now 🎬🍿",
@@ -383,7 +383,7 @@ export const SkipGauntlet = () => {
               {[
                 "I'm too pretty for puzzles 💅",
                 "My brain needs beauty sleep 😴",
-                "I ate too many croissants to think 🥐",
+                "I ate too much KFC to think 🍗",
                 "The hijab is too fabulous today 🧕✨",
               ].map((label) => (
                 <label key={label} className="cute-radio">
@@ -540,17 +540,16 @@ export const SkipGauntlet = () => {
           </>
         );
 
-      /* ---- STEP 9: Croissant confirmation ---- */
+      /* ---- STEP 9: KFC confirmation ---- */
       case 9:
         return (
           <>
             <Coffee size={48} style={{ color: 'var(--pink-500)', marginBottom: '1rem' }} />
             <h2 style={{ marginBottom: '1rem' }}>
-              Fine… but you owe me a croissant
+              Fine… but you owe me a KFC
             </h2>
             <p style={{ marginBottom: '2rem' }}>
-              Actually, make that two. And a pain au chocolat. No, three
-              croissants and a crème brûlée. Final offer.
+              Actually, make that a Zinger Burger, some hot wings, and a large fries. Final offer.
             </p>
             {!confirmed ? (
               <button
@@ -649,10 +648,49 @@ export const SkipGauntlet = () => {
     }
   };
 
+  const getPageStyle = () => {
+    if (step === 6) {
+      const bgImage = toggleOn
+        ? 'https://images7.alphacoders.com/800/800653.jpg'
+        : 'https://images6.alphacoders.com/112/1129972.jpg';
+      return {
+        backgroundImage: `linear-gradient(rgba(255, 240, 245, 0.3), rgba(255, 240, 245, 0.3)), url("${bgImage}")`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundAttachment: 'fixed',
+        transition: 'background-image 0.5s ease-in-out',
+      };
+    }
+    return {};
+  };
+
   return (
     <>
       <FloatingHearts />
-      <div className="page">
+      {step !== 6 && (
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          key="bg-video"
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            zIndex: 0,
+            opacity: 0.45,
+            pointerEvents: 'none',
+          }}
+        >
+          <source src="https://giffiles.alphacoders.com/223/thumb-440-223488.mp4" type="video/mp4" />
+        </video>
+      )}
+      <div className="page" style={getPageStyle()}>
         <Header />
         <div
           className="glass-card animate-fade-in-up"
