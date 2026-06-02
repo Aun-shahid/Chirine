@@ -298,7 +298,7 @@ export const SkipGauntlet = () => {
             <h2 style={{ marginBottom: '1.5rem' }}>
               Confirm ALL to proceed
             </h2>
-            
+
             {checkboxTrickPlayed && !checks.every(Boolean) && (
               <p style={{ color: 'var(--pink-500)', fontSize: '0.9rem', marginBottom: '1rem', fontWeight: 500 }} className="animate-fade-in">
                 Wait... did they just all uncheck themselves? 😲 Try checking them all again!
@@ -315,15 +315,15 @@ export const SkipGauntlet = () => {
               }}
             >
               {[
-                "I'm too lazy for puzzles 🥱",
-                "I prefer eating KFC over finding clues 🍗",
-                "My curly hair is too fabulous for this stress 🧕✨",
+                "I'm too lazy for puzzles",
+                "I'm blind and i cant see so no clues",
+                "The stress of finding the clues was too much 😩",
                 "I choose sleep over adventure 😴",
                 "I'd rather be watching a movie with you right now 🎬🍿",
                 "I want the easy way out 🤷‍♀️",
-                "I promise to look at the letter later ✍️",
-                "I acknowledge that I am skipping the best puzzle ever 💔",
-                "I don't appreciate Aun's hard work (completely false but I'll check it anyway) 🥺",
+                "I promise to do anything for u in return",
+                "I'm really sorry nienie, ure the best person ever",
+                "I don't appreciate Aun's hard work",
                 "I hereby declare myself a certified puzzle quitter 🏆",
               ].map((label, i) => (
                 <label key={i} className="cute-checkbox">

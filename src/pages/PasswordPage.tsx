@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import { FloatingHearts } from '../components/FloatingHearts';
 import { LetterReveal } from './LetterReveal';
 import { LockKeyhole, Sparkles, HelpCircle, ChevronDown, ChevronUp } from 'lucide-react';
@@ -7,6 +8,9 @@ import { Header } from '../components/Header';
 const SECRET_PASSWORD = 'carrots';
 
 export const PasswordPage = () => {
+  const location = useLocation();
+  const fromGauntlet = location.state?.fromGauntlet || false;
+
   const [password, setPassword] = useState('');
   const [unlocked, setUnlocked] = useState(false);
   const [error, setError] = useState(false);
@@ -69,7 +73,7 @@ export const PasswordPage = () => {
             className="gradient-text"
             style={{ marginBottom: '0.5rem', fontSize: '2.3rem' }}
           >
-            Almost There!
+            {fromGauntlet ? "Aha! You Quitter! 😜" : "Almost There! ✨"}
           </h1>
 
           <p
@@ -78,9 +82,19 @@ export const PasswordPage = () => {
               fontSize: '1.05rem',
             }}
           >
-            You Are here finally! ✨
-            <br />
-            Now enter the secret password to unlock your surprise.
+            {fromGauntlet ? (
+              <>
+                You tried to skip the puzzle, didn't you?
+                <br />
+                Fine, I will still let you unlock your surprise, but you must enter the secret password first!
+              </>
+            ) : (
+              <>
+                You Are here finally! ✨
+                <br />
+                Now enter the secret password to unlock your surprise.
+              </>
+            )}
           </p>
 
           <form

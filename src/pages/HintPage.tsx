@@ -44,7 +44,7 @@ export const HintPage = () => {
   return (
     <>
       <FloatingHearts />
-      <div 
+      <div
         className="page"
         style={{
           backgroundImage: 'linear-gradient(rgba(255, 240, 245, 0.45), rgba(255, 240, 245, 0.45)), url("https://tse2.mm.bing.net/th/id/OIP.Ye0VzayEbOT5ppOqQnhrcAHaDj?rs=1&pid=ImgDetMain&o=7&rm=3")',
@@ -195,7 +195,7 @@ export const HintPage = () => {
                   pointerEvents: 'none',
                 }}
               >
-                <Move size={12} /> Drag or swipe to pan & find QR codes!
+                <Move size={12} /> Drag or swipe to pan!
               </div>
             )}
 
