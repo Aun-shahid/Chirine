@@ -39,7 +39,7 @@ export const PasswordPage = () => {
   const errorMessages = [
     'Nope! Try again, cutie 💕',
     'Still not it! Think harder, beautiful 🤔',
-    "Think crunchy and orange... 🥕",
+    "Think what id love to eattttt",
     'So close (maybe)! One more try 💪',
     "I'll wait forever for you to get this 💗",
   ];
@@ -47,7 +47,7 @@ export const PasswordPage = () => {
   return (
     <>
       <FloatingHearts />
-      <div 
+      <div
         className="page"
         style={{
           backgroundImage: 'linear-gradient(rgba(255, 240, 245, 0.4), rgba(255, 240, 245, 0.4)), url("https://cdn.mos.cms.futurecdn.net/JUhtp5khvqdw8ZYfNBJVU6.jpg")',
@@ -162,9 +162,9 @@ export const PasswordPage = () => {
             >
               <HelpCircle size={16} /> Need a hint? {showHint ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
             </button>
-            
+
             {showHint && (
-              <div 
+              <div
                 className="animate-fade-in"
                 style={{
                   marginTop: '0.75rem',
@@ -180,14 +180,14 @@ export const PasswordPage = () => {
               >
                 <p style={{ margin: 0, fontWeight: 500 }}>Patience is virtue.</p>
                 <p style={{ margin: '0.25rem 0 0.5rem 0', fontWeight: 500 }}>You may not have all the pieces yet.</p>
-                <p style={{ 
-                  margin: 0, 
-                  fontSize: '0.8rem', 
-                  opacity: 0.8, 
-                  borderTop: '1px dashed rgba(244, 63, 94, 0.2)', 
-                  paddingTop: '0.4rem', 
-                  marginTop: '0.4rem', 
-                  fontStyle: 'italic' 
+                <p style={{
+                  margin: 0,
+                  fontSize: '0.8rem',
+                  opacity: 0.8,
+                  borderTop: '1px dashed rgba(244, 63, 94, 0.2)',
+                  paddingTop: '0.4rem',
+                  marginTop: '0.4rem',
+                  fontStyle: 'italic'
                 }}>
                   PS: Something i'd love to eat one day.
                 </p>
