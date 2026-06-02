@@ -47,7 +47,7 @@ export const HintPage = () => {
       <div 
         className="page"
         style={{
-          backgroundImage: 'linear-gradient(rgba(255, 240, 245, 0.45), rgba(255, 240, 245, 0.45)), url("https://images8.alphacoders.com/100/1006728.jpg")',
+          backgroundImage: 'linear-gradient(rgba(255, 240, 245, 0.45), rgba(255, 240, 245, 0.45)), url("https://tse2.mm.bing.net/th/id/OIP.Ye0VzayEbOT5ppOqQnhrcAHaDj?rs=1&pid=ImgDetMain&o=7&rm=3")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',

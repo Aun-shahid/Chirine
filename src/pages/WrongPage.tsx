@@ -7,16 +7,25 @@ interface WrongPageProps {
   iconName?: string;
   message: string;
   subMessage?: string;
+  bgImage?: string;
 }
 
-export const WrongPage = ({ emoji, iconName, message, subMessage }: WrongPageProps) => {
+export const WrongPage = ({ emoji, iconName, message, subMessage, bgImage }: WrongPageProps) => {
   // Resolve Lucide icon dynamically from its string name
   const IconComponent = iconName ? (Icons as any)[iconName] : null;
+
+  const bgStyle = bgImage ? {
+    backgroundImage: `linear-gradient(rgba(255, 240, 245, 0.45), rgba(255, 240, 245, 0.45)), url("${bgImage}")`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+    backgroundAttachment: 'fixed',
+  } : {};
 
   return (
     <>
       <FloatingHearts />
-      <div className="page">
+      <div className="page" style={bgStyle}>
         <Header />
         <div className="glass-card animate-fade-in-up" style={{ textAlign: 'center' }}>
           <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '1.5rem' }}>

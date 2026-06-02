@@ -9,7 +9,7 @@ export const LetterPage = () => {
       <div 
         className="page"
         style={{
-          backgroundImage: 'linear-gradient(rgba(255, 240, 245, 0.45), rgba(255, 240, 245, 0.45)), url("https://images4.alphacoders.com/100/1007089.jpg")',
+          backgroundImage: 'linear-gradient(rgba(255, 240, 245, 0.45), rgba(255, 240, 245, 0.45)), url("https://th.bing.com/th/id/R.e7ecc82b87ae437c5c049c715d66d24a?rik=kgp2M6jhlWE8YQ&pid=ImgRaw&r=0")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
