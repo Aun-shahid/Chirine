@@ -46,7 +46,7 @@ export const PasswordPage = () => {
       <div 
         className="page"
         style={{
-          backgroundImage: 'linear-gradient(rgba(255, 240, 245, 0.4), rgba(255, 240, 245, 0.4)), url("https://images3.alphacoders.com/100/1006667.jpg")',
+          backgroundImage: 'linear-gradient(rgba(255, 240, 245, 0.4), rgba(255, 240, 245, 0.4)), url("https://cdn.mos.cms.futurecdn.net/JUhtp5khvqdw8ZYfNBJVU6.jpg")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',

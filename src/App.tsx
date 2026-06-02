@@ -12,7 +12,8 @@ function App() {
   useEffect(() => {
     const imagesToPreload = [
       'https://images5.alphacoders.com/138/thumb-1920-1383701.jpg',
-      'https://images3.alphacoders.com/100/1006667.jpg',
+      'https://cdn.mos.cms.futurecdn.net/JUhtp5khvqdw8ZYfNBJVU6.jpg',
+      'https://assetsio.gnwcdn.com/paint-effect-artwork-for-Clair-Obscur-Expedition-33-showing-two-characters-holding-hands-while-looking-towards-eachother.jpg?width=1920&height=1920&fit=bounds&quality=70&format=jpg&auto=webp',
       'https://th.bing.com/th/id/R.e7ecc82b87ae437c5c049c715d66d24a?rik=kgp2M6jhlWE8YQ&pid=ImgRaw&r=0',
       'https://tse2.mm.bing.net/th/id/OIP.Ye0VzayEbOT5ppOqQnhrcAHaDj?rs=1&pid=ImgDetMain&o=7&rm=3',
       'https://tse3.mm.bing.net/th/id/OIP.x2AxYRzCLEpsctdjepJbOQHaDt?rs=1&pid=ImgDetMain&o=7&rm=3',

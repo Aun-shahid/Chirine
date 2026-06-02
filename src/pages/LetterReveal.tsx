@@ -11,7 +11,7 @@ export const LetterReveal = () => {
         style={{
           paddingTop: '3rem',
           paddingBottom: '4rem',
-          backgroundImage: 'url("/pinkBackground.jpg")',
+          backgroundImage: 'linear-gradient(rgba(255, 240, 245, 0.4), rgba(255, 240, 245, 0.4)), url("https://assetsio.gnwcdn.com/paint-effect-artwork-for-Clair-Obscur-Expedition-33-showing-two-characters-holding-hands-while-looking-towards-eachother.jpg?width=1920&height=1920&fit=bounds&quality=70&format=jpg&auto=webp")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundAttachment: 'fixed',
